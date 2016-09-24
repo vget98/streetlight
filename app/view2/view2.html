@@ -1,5 +1,11 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<p> view 2 </p>
+<p> points </p>
+<input ng-model="vt.points"></input>
+<p> model </p>
+<input ng-model="vt.model"></input>
+<demo
+  demoname="demo"
+  points="vt.points"
+  model="vt.model"
+  callback="vt.print(value)"></demo>
+
