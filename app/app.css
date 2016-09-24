@@ -23,3 +23,12 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+#ng-map {
+  height: 100%;
+  display: block;
+}
+
+#map-container {
+  height: 600px;
+}
