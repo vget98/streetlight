@@ -1,4 +1,4 @@
-angular.module('myApp.map')
+angular.module('myApp.mapWrapper')
   .controller('MapCtrl', ['NgMap',function(NgMap){
     var mc = this;
     console.log(mc);

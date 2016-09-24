@@ -1,6 +1,6 @@
-angular.module('myApp.map', ['ngMap'])
-  .component('map',{
-    templateUrl:'view1/map/map.html',
+angular.module('myApp.mapWrapper', ['ngMap'])
+  .component('mapWrapper',{
+    templateUrl:'view1/map/mapWrapper.html',
     bindings: {
       points:'<',
       callback: '&',
