@@ -2,19 +2,29 @@ angular.module('myApp.mapWrapper')
   .controller('MapCtrl', ['NgMap',function(NgMap){
     var mc = this;
     console.log(orgs);
-    mc.orgs = Object.keys(orgs).map(function(name){
-      return orgs[name];
-    });
 
 
 
+    _getMap = function(){
+        console.log("timeout")
+        NgMap.getMap('ng-map').then(function(map) {
+          mc.map = map;
+          console.log(map.getCenter());
+          console.log('markers', map.markers);
+          console.log('shapes', map.shapes);
+        });
+    }
 
 
-    NgMap.getMap().then(function(map) {
-      console.log(map.getCenter());
-      console.log('markers', map.markers);
-      console.log('shapes', map.shapes);
-    });
+    mc.$onInit = function() {
+      mc.orgs = Object.keys(orgs).map(function(name){
+        return orgs[name];
+      });
+      _getMap();
+    }
+
+
+
   }]);
 
 

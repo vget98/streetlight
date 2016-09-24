@@ -7,8 +7,12 @@
   default-style="false">
     <marker ng-repeat="o in mc.orgs track by $index"
       id="custom-marker-{{$index}}"
+      on-click="mc.map.showInfoWindow(event, $index)"
       position="{{o.location}}">
 <!--       <div>
         position {{p.name}}: {{p.pos[0]}}, {{p.pos[1]}}
       </div> -->
     </marker>
+    <info-window id="0" max-width="200">
+      <demo></demo>
+    </info-window>
