@@ -5,3 +5,10 @@
   center="37.7749, -122.4194"
   map-type-id="ROADMAP"
   default-style="false">
+    <marker ng-repeat="o in mc.orgs track by $index"
+      id="custom-marker-{{$index}}"
+      position="{{o.location}}">
+<!--       <div>
+        position {{p.name}}: {{p.pos[0]}}, {{p.pos[1]}}
+      </div> -->
+    </marker>
