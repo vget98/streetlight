@@ -1,5 +1,5 @@
 angular.module('myApp.map')
   .controller('MapCtrl', [function(){
-    mc = this;
+    var mc = this;
     console.log(mc);
-  }])
+  }]);
