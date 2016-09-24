@@ -3,7 +3,7 @@ angular.module('myApp.mapWrapper', ['ngMap'])
     templateUrl:'view1/map/mapWrapper.html',
     bindings: {
       points:'<',
-      callback: '&',
+      setOrg: '&',
       mapname: '@',
       model:'='
     },

@@ -15,8 +15,14 @@ angular.module('myApp.mapWrapper')
         });
     }
 
+    mc.markerClickHandler = function(event, $index, o){
+      console.log('args: ', event, $index, o)
+      mc.map.showInfoWindow(event, $index)
+      mc.setOrg({'orgName': o.name});
+    }
 
     mc.$onInit = function() {
+      console.log('setOrgCb: ', mc.setOrg)
       mc.orgs = Object.keys(orgs).map(function(name){
         return orgs[name];
       });
