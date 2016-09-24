@@ -1,4 +1,4 @@
-angular.module('myApp.map', [])
+angular.module('myApp.map', ['ngMap'])
   .component('map',{
     templateUrl:'view1/map/map.html',
     bindings: {
