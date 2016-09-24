@@ -61,3 +61,5 @@ var orgs = {
     }]
   }
 }
+
+module.exports = orgs;
