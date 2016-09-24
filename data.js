@@ -10,7 +10,7 @@
 //       location: [1,1],
 //       description: 'description',
 //       date: 'string',
-//       time: 'string'
+//       time: ['start string','end string']
 //     }]
 //   }
 // }
@@ -29,7 +29,7 @@ var orgs = {
       location: [37.784784, -122.410136],
       description: 'description',
       date: '09/25/16',
-      time: ['16:30','22:00'}
+      time: ['16:30','22:00']
     }]
   },
   'Urban Helpers':{
