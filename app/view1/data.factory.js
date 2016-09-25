@@ -66,5 +66,57 @@ var _orgs = {
       date: '09/25/16',
       time: ['12:00','17:30']
     }]
+  },
+    'Sunset Helpers': {
+    name: 'Sunset Helpers',
+    emial: 'sunsethelpers@hotmail.com',
+    location: [37.750573, -122.498686],
+    description: 'helping homeless walk into sunset',
+    address: '',
+    category: 'Healthcare',
+    serviceArea: [],
+    events: [{
+      name: 'Soup Kitchen',
+      location: [37.750573, -122.498686],
+      address: '',
+      description: 'Come eat our soup',
+      date: '10/11/16',
+      time: ['08:00', '20:00']
+    }]
+  },
+  'Merced Helpers': {
+    name: 'Merced Helpers',
+    emial: 'mercedhelpers@hotmail.com',
+    location: [37.708329, -122.447038],
+    description: 'Helping homelss around the lake',
+    address: '',
+    category: 'food',
+    serviceArea: [],
+    events: [{
+      name: 'Merced Food Drive',
+      location: [37.708329, -122.447038],
+      address: '',
+      description: 'Food drive for the homeless',
+      date: '12/24/16',
+      time: ['13:00', '18:45']
+    }]
+  },
+  'Visitation Helpers': {
+    name: 'Visitation Helpers',
+    email: 'visitationhelpers.gmail.com',
+    location: [37.713948, -122.407953],
+    description: 'visiting the homeless in the valley',
+    address: '',
+    category: 'food',
+    serviceArea: [],
+    events: [{
+      name: 'valley food fair',
+      location: [37.713948, -122.407953],
+      address: '',
+      description: 'Food in the valley',
+      date: '1/1/17',
+      time: ['08:00', '12:56']
+    }]
   }
+
 };
