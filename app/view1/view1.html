@@ -1,12 +1,13 @@
 <div class="container">
-  <button type="button" class="btn btn-default" ng-click="vc.open('lg')">Large modal</button>
-  <button type="button" class="btn btn-default pull-right" ng-click="vc.addEvent('lg')" ng-if="vc.selectedOrgName">Add Event</button>
+
   <div class='row'>
     <div class='col-md-9 pull-left' id='map-container'>
       <map-wrapper mapname="map" set-org="vc.setSelectedOrg(orgName)" org-map="vc.orgMap"></map-wrapper>
     </div>
     <div class='col-md-3 pull-right'>
-      <event-list org-name='vc.selectedOrgName' events="vc.events"></event-list>
+      <button type="button" class="btn btn-default" id="eventButton" ng-click="vc.addEvent('lg')">Add Event</button>
+
+      <event-list org-name='vc.selectedOrgName' org-map="vc.orgMap"></event-list>
     </div>
   </div>
 </div>

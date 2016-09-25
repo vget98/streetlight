@@ -39,7 +39,6 @@ body{
   padding-right: 0.3em;
 }
 .jumbotron{
-  margin:0 !important;
   color: white !important;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   background-image: url('http://img08.deviantart.net/d2b0/i/2011/308/b/7/street_lights_by_iswish-d4f228e.jpg');
@@ -55,6 +54,10 @@ body{
 #ng-map {
   height: 100%;
   display: block;
+}
+
+#view2{
+  text-align:center;
 }
 
 #map-container {
