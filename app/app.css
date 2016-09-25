@@ -1,5 +1,20 @@
 /* app css stylesheet */
-
+body{
+  background-color: #D9D9D9 !important;
+  font-family: 'Lobster', cursive !important;
+}
+.nav{
+  background-color: black;
+}
+.nav a{
+  color: white;
+}
+.nav a:hover,
+.nav a:active,
+.nav a:focus{
+  background-color: white !important;
+  color:black;
+}
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -23,6 +38,19 @@
   content: "|";
   padding-right: 0.3em;
 }
+.jumbotron{
+  margin:0 !important;
+  color: white !important;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background-image: url('http://img08.deviantart.net/d2b0/i/2011/308/b/7/street_lights_by_iswish-d4f228e.jpg');
+  background-position: 0px -100px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.jumbotron h1{
+  font-size: 600% !important;
+  font-family: 'Lobster', cursive;
+}
 
 #ng-map {
   height: 100%;
@@ -31,8 +59,8 @@
 
 #map-container {
   height: 600px;
+  margin: 0 !important;
 }
-
 .right-side {
   float: right;
 }

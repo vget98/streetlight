@@ -17,5 +17,4 @@ angular.module('myApp.map', [])
 
 
 
-
   //component takes obj
