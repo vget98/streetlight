@@ -143,7 +143,7 @@ var _orgs = {
     description: 'The mission of Project Homeless Connect is to connect San Franciscans experiencing homelessness with the care they need to move forward',
     address: '25 Van Ness Ave #340, San Francisco, CA 94102',
     category: 'Healthcare',
-    serviceArea: [],
+    serviceArea: [[37.79323632157157,-122.39765167236328],[37.78753873820529,-122.442626953125],[37.75795850991872,-122.42717742919922],[37.75850137297436,-122.40486145019531],[37.77885586164994,-122.3876953125],[37.79296501804014,-122.39765167236328]],
     events: [{
       name: 'Project Homeless Connect',
       location: [37.776472, -122.420194],
