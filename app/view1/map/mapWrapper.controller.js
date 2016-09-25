@@ -56,6 +56,7 @@ angular.module('myApp.mapWrapper')
     };
 
     mc.getIcon = function(category) {
+      category = category.toLowerCase();
       var _icon = {
         'healthcare': 'map-icon-doctor',
         'food': 'map-icon-food',
