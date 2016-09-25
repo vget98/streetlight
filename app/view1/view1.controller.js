@@ -36,7 +36,7 @@ angular.module('myApp.view1')
       ariaDescribedBy: 'modal-body',
       templateUrl: 'view1/addevent/addEvent.html',
        controller: 'AddEventCtrl',
-       controllerAs: 'uc',
+       controllerAs: 'ec',
       size: size
     });
   }
