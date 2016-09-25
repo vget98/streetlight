@@ -14,7 +14,8 @@ angular.module('myApp', [
   'myApp.eventList',
   'myApp.userInfo',
   'myApp.addEvent',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'myApp.helper'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

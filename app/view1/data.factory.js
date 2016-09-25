@@ -8,6 +8,7 @@ angular.module('myApp.data', [])
     data.orgs = _orgs;
     data.addOrg = function(org){
       data.orgs[org.name] = org;
+      console.log('orgData: ', data.orgs);
     };
     return data;
   }
@@ -17,6 +18,7 @@ angular.module('myApp.data', [])
 var _orgs = {
   'Helping Hand':{
     name: 'Helping Hand',
+    email: 'helpinghand@hotmail.com',
     location: [37.784784, -122.410136],
     address: '261 Ellis Street, San Francisco, CA 94102',
     description: 'its hands that help',
@@ -33,6 +35,7 @@ var _orgs = {
   },
   'Urban Helpers':{
     name: 'Urban Helpers',
+    email: 'urbanhelpers@yahoo.com',
     location: [37.753726, -122.387846],
     address: '2833 3rd Street, San Francisco, CA 94107',
     description: 'urban areas need help',
@@ -49,6 +52,7 @@ var _orgs = {
   },
   'Mountain Helpers':{
     name: 'Mountain Helpers',
+    email: 'mountainhelpers@sbcglobal.net',
     location: [37.786962, -122.458764],
     description: 'i guess some mountains need help too',
     address: '3984 Sacramento Street, San Francisco, CA 94118',
