@@ -9,19 +9,6 @@ angular.module('myApp.view1')
     console.log("Selected Org Name called ", vc.selectedOrgName)
   };
 
-  vc.animationsEnabled = true;
-  vc.open = function (size) {
-    console.log('fucking first one');
-     var modalInstance = $uibModal.open({
-       animation: vc.animationsEnabled,
-       ariaLabelledBy: 'modal-title',
-       ariaDescribedBy: 'modal-body',
-       templateUrl: 'view1/userInfo/userInfo.html',
-       controller: 'UserInfoCtrl',
-       controllerAs: 'uc',
-       size: size
-     });
-   };
   var _checkOrgMap = function(){
     console.log('length: ', Object.keys(DataFactory.orgs).length);
     return Object.keys(DataFactory.orgs).length;

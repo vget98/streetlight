@@ -18,11 +18,11 @@
   <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
-<body>
+<body ng-controller ='AppCtrl'>
   <ul class="nav nav-tabs nav-justified">
     <li><a href="#!/view1">Map</a></li>
-    <li><a href="#!/view2">About</a></li>
-    <li><a href="#!/view2">Add Organization</a></li>
+    <li><a href="#!/view2">Events</a></li>
+    <li><a ng-click="open('lg')">Add Organization</a></li>
   </ul>
   <div class="jumbotron">
     <h1>Street Light</h1>

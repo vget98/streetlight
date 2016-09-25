@@ -21,4 +21,19 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+}])
+.controller('AppCtrl', ['$uibModal', 'DataFactory', '$scope', function($uibModal, DataFactory, $scope) {
+  $scope.animationsEnabled = true;
+  $scope.open = function (size) {
+    console.log('fucking first one');
+     var modalInstance = $uibModal.open({
+       animation: $scope.animationsEnabled,
+       ariaLabelledBy: 'modal-title',
+       ariaDescribedBy: 'modal-body',
+       templateUrl: 'view1/userInfo/userInfo.html',
+       controller: 'UserInfoCtrl',
+       controllerAs: 'uc',
+       size: size
+     });
+   };
+  }]);

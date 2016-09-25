@@ -24,12 +24,21 @@ var _orgs = {
     description: 'its hands that help',
     category: 'exercise',
     serviceArea: [[37.80218877920469,-122.43267059326172],[37.779398571318765,-122.43301391601562],[37.773157169570695,-122.40245819091797],[37.785096782276035,-122.3880386352539],[37.798662182986945,-122.39662170410156],[37.80544394934271,-122.40348815917969],[37.80815648152641,-122.41344451904297],[37.80463017025873,-122.43026733398438],[37.802460048862656,-122.43404388427734]],
-    events:[{
+    events:[
+    {
       name:'Give a Hand',
       location: [37.784784, -122.410136],
       address: '261 Ellis Street, San Francisco, CA 94102',
       description: 'Volunteer to help those who need it',
       date: '09/25/16',
+      time: ['16:30','22:00']
+    },
+    {
+      name:'Lift a hand',
+      location: [37.784784, -122.410136],
+      address: '261 Ellis Street, San Francisco, CA 94102',
+      description: 'Volunteer to help those who need it',
+      date: '09/27/16',
       time: ['16:30','22:00']
     }]
   },
@@ -41,12 +50,21 @@ var _orgs = {
     description: 'urban areas need help',
     category: 'food',
     serviceArea: [[37.78238340327456,-122.38838195800781],[37.773699921075135,-122.40623474121094],[37.75334401310656,-122.40348815917969],[37.73786977649298,-122.40657806396484],[37.735154664553534,-122.37602233886719],[37.78238340327456,-122.3876953125]],
-    events:[{
+    events:[
+    {
       name:'Urban Helpers Meeting',
       location: [37.753726, -122.387846],
       address: '2833 3rd Street, San Francisco, CA 94107',
       description: 'Meet with the Urban Helpers and learn more',
       date: '09/25/16',
+      time: ['17:45','20:00']
+    },
+    {
+      name:'Urban Helpers Meeting',
+      location: [37.753726, -122.387846],
+      address: '2833 3rd Street, San Francisco, CA 94107',
+      description: 'Meet with the Urban Helpers and learn more',
+      date: '09/28/16',
       time: ['17:45','20:00']
     }]
   },
