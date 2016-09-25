@@ -59,16 +59,15 @@ body{
 
 #map-container {
   height: 600px;
-<<<<<<< b74283a1d17fe34a3ceb67f0edbef013744fb050
   margin: 0 !important;
 }
+
 .right-side {
   float: right;
-=======
+
 }
 
 .map-icon {
     font-size: 20px;
     color: beige;
->>>>>>> (feat) Add icons based on category
 }
