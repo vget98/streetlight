@@ -4,26 +4,34 @@
   zoom="12"
   center="37.7749, -122.4194"
   map-type-id="ROADMAP"
-  default-style="false">
+  default-style="false"
+  on-click="mc.mapClickHandler()">
   <div ng-repeat="o in mc.orgs track by $index">
     <marker
       id="custom-marker-{{$index}}"
       on-click="mc.showInfoWindow(event, $index,o)"
       position="{{o.location}}">
-<!--       <div>
-        position {{p.name}}: {{p.pos[0]}}, {{p.pos[1]}}
-      </div> -->
-
     </marker>
-    <span>{{$index}}</span>
-    <span>{{o.name}}</span>
     <info-window
       id="{{$index}}"
-      data-index="{{$index}}"
-      >
-<!--       <infowindow get-org="mc.getOrg($index)"></infowindow> -->
+      data-index="{{$index}}">
     </info-window>
+    <shape name="polygon"
+         paths="{{o.serviceArea}}"
+         stroke-color="{{mc.getColor(o.category)}}"
+         stroke-opacity="0.8"
+         stroke-weight="2"
+         fill-color="{{mc.getColor(o.category)}}"
+         fill-opacity="0.35">
+    </shape>
   </div>
+
+    <shape name="polyline" id="foo"
+           path="{{mc.path}}"
+           stroke-color="#FF0000"
+           stroke-opacity="1.0"
+           stroke-weight="3">
+        </shape>
 </ng-map>
 <!--
       <info-window id="0" max-width="200">
