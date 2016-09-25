@@ -1,8 +1,8 @@
 angular.module('myApp.mapWrapper')
-  .controller('MapCtrl', ['NgMap', 'DataFactory', function(NgMap, DataFactory){
+  .controller('MapCtrl', ['NgMap', function(NgMap){
     var mc = this;
 
-    _getMap = function(){
+    var _getMap = function(){
         console.log("timeout");
         NgMap.getMap('ng-map').then(function(map) {
           mc.map = map;
@@ -10,6 +10,13 @@ angular.module('myApp.mapWrapper')
           console.log('markers', map.markers);
           console.log('shapes', map.shapes);
         });
+    };
+
+    var _listOrgs = function(){
+      console.log('mc: ', mc);
+      mc.orgs = Object.keys(mc.orgMap).map(function(name){
+        return mc.orgMap[name];
+      });
     };
 
     mc.markerClickHandler = function(event, $index, o){
@@ -53,9 +60,7 @@ angular.module('myApp.mapWrapper')
     mc.$onInit = function() {
       console.log('setOrgCb: ', mc.setOrg);
       mc.path = [];
-      mc.orgs = Object.keys(DataFactory.orgs).map(function(name){
-        return DataFactory.orgs[name];
-      });
+      _listOrgs();
       mc.paths = mc.orgs.map(function(org){
         return org.location
       });
@@ -66,6 +71,10 @@ angular.module('myApp.mapWrapper')
       ];
       console.log('mc.paths:', mc.paths)
       _getMap();
+    };
+
+    mc.$onChanges = function() {
+      _listOrgs();
     }
 
   }]);

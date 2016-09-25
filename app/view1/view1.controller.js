@@ -1,16 +1,15 @@
 angular.module('myApp.view1')
-  .controller('View1Ctrl', ['$uibModal', function($uibModal) {
+  .controller('View1Ctrl', ['$uibModal', 'DataFactory', function($uibModal, DataFactory) {
   var vc = this;
   vc.yolo = 'hey there';
 
   vc.setSelectedOrg = function(orgName) {
     vc.selectedOrgName = orgName;
     console.log("Selected Org Name called ", vc.selectedOrgName)
-  }
+  };
 
   vc.animationsEnabled = true;
-
-   vc.open = function (size) {
+  vc.open = function (size) {
     console.log('fucking first one');
      var modalInstance = $uibModal.open({
        animation: vc.animationsEnabled,
@@ -21,6 +20,12 @@ angular.module('myApp.view1')
        controllerAs: 'uc',
        size: size
      });
-   }
+   };
+  var _init = function(){
+    vc.orgMap = DataFactory.orgs;
+    console.log('orgMap: ', vc.orgMap)
+  };
+  _init()
+
 
 }]);

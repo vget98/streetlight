@@ -2,10 +2,10 @@
   <button type="button" class="btn btn-default" ng-click="vc.open('lg')">Large modal</button>
   <div class='row'>
     <div class='col-md-9 pull-left' id='map-container'>
-      <map-wrapper mapname="map" set-org="vc.setSelectedOrg(orgName)"></map-wrapper>
+      <map-wrapper mapname="map" set-org="vc.setSelectedOrg(orgName)" org-map="vc.orgMap"></map-wrapper>
     </div>
     <div class='col-md-3 pull-right'>
-      <event-list org-name='vc.selectedOrgName'></event-list>
+      <event-list org-name='vc.selectedOrgName' org-map="vc.orgMap"></event-list>
     </div>
   </div>
 </div>
