@@ -6,12 +6,12 @@ angular.module('myApp.userInfo', [])
       MyAppFactory.getCoordinates(uc.org.address).then(function(result){
         uc.org.location = result;
         DataFactory.addOrg(uc.org);
-        $scope.$close()
+        $scope.$close(uc.org);
       });
     };
     var _init = function() {
       uc.org = {};
       uc.org.events = [];
     };
-    _init()
+    _init();
   }]);
