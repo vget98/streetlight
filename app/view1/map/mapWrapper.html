@@ -5,7 +5,8 @@
   center="37.7749, -122.4194"
   map-type-id="ROADMAP"
   default-style="false">
-    <marker ng-repeat="o in mc.orgs track by $index"
+  <div ng-repeat="o in mc.orgs track by $index">
+    <marker
       id="custom-marker-{{$index}}"
       on-click="mc.map.showInfoWindow(event, $index) && mc.markerClickHandler(event, $index, o)"
       position="{{o.location}}">
@@ -14,11 +15,11 @@
       </div> -->
 
     </marker>
-    <info-window ng-repeat="o in mc.orgs track by $index"
+    <info-window
       id="{{$index}}">
       <infowindow></infowindow>
     </info-window>
-
+  </div>
 <!--
       <info-window id="0" max-width="200">
         <demo></demo>
