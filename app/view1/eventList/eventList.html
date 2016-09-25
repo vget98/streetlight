@@ -1,9 +1,7 @@
-<div>
-  {{elc.currOrg.name}}
-  <div ng-repeat='event in elc.currOrg.events'>
-    <div>{{event.name}}</div>
-    <div>Location: {{event.location}}</div>
-    <div>{{event.description}}</div>
-    <div>{{event.date}}: {{event.time[0]}} to {{event.time[1]}} </div>
-  </div>
-</div>
+<h3 ng-if='elc.currOrg'><span class="label label-default">{{elc.currOrg.name}} events: </span></h3>
+<ul class="list-group" ng-repeat='event in elc.currOrg.events'>
+  <li class="list-group-item">{{event.name}}</li>
+  <li class="list-group-item">Location: {{event.address}}</li>
+  <li class="list-group-item">{{event.description}}</li>
+  <li class="list-group-item">{{event.date}}: {{event.time[0]}} to {{event.time[1]}}</li>
+</ul>

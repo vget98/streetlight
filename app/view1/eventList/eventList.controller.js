@@ -1,10 +1,8 @@
 angular.module('myApp.eventList')
-  .controller('EventListCtrl', ['$scope',function($scope, MyAppFactory){
+  .controller('EventListCtrl', ['$scope','DataFactory',function($scope, DataFactory){
     var elc = this;
-
    elc.$onChanges = function(){
-      elc.currOrg = orgs[elc.orgName];
-      console.log('dsadsadsa');
+      elc.currOrg = DataFactory.orgs[elc.orgName];
    }
 
   }]);
