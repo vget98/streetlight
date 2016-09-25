@@ -12,6 +12,7 @@ angular.module('myApp', [
   'myApp.data',
   'myApp.infoWindow',
   'myApp.eventList',
+  'myApp.userInfo',
   'ui.bootstrap'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

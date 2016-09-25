@@ -1,5 +1,5 @@
 angular.module('myApp.view1')
-  .controller('View1Ctrl', [function($uibModal) {
+  .controller('View1Ctrl', ['$uibModal', function($uibModal) {
   var vc = this;
   vc.yolo = 'hey there';
 
@@ -16,7 +16,7 @@ angular.module('myApp.view1')
        animation: vc.animationsEnabled,
        ariaLabelledBy: 'modal-title',
        ariaDescribedBy: 'modal-body',
-       templateUrl: 'userInfo.html',
+       templateUrl: 'view1/userInfo/userInfo.html',
        controller: 'UserInfoCtrl',
        controllerAs: 'uc',
        size: size
