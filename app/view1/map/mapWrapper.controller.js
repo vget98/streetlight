@@ -26,10 +26,14 @@ angular.module('myApp.mapWrapper')
 
     mc.showInfoWindow = function(event, $index,o) {
       var infowindow = new google.maps.InfoWindow();
+      var center = new google.maps.LatLng(mc.orgs[$index].location[0]+0.006, mc.orgs[$index].location[1]);
 
+      infowindow.setPosition(center);
 
       infowindow.setContent(
-          '<h3>' + $index + '</h3>');
+          '<h5>' + mc.orgs[$index].name + '</h5>' +
+          '<p>' + mc.orgs[$index].description + '</p>'
+          );
 
       infowindow.open(mc.map);
       mc.setOrg({'orgName': o.name});
