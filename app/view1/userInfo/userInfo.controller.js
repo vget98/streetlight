@@ -1,4 +1,4 @@
-angular.module('myApp.userInfo', ['DataFactory'])
+angular.module('myApp.userInfo', [])
   .controller('UserInfoCtrl', [function(DataFactory) {
     console.log(DataFactory);
   }]);
