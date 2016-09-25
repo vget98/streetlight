@@ -6,6 +6,9 @@ angular.module('myApp.data', [])
     // 3) add other non-org data as needed to this file
     var data = {};
     data.orgs = _orgs;
+    data.addOrg = function(org){
+      data.orgs[org.name] = org;
+    };
     return data;
   }
   ]);
