@@ -1,8 +1,11 @@
 <div class="container" id="view2">
   <h1>Events</h1>
-  <input type="text" ng-model="name">
+  <form>
+      <input type="text" class="form-control" id="searchbox" ng-model="search" placeholder="Search events">
+      <br>
+  </form>
 
-  <div ng-repeat="event in vt.orgEvents">
+  <div ng-repeat="event in vt.orgEvents|filter:search">
     <ul class="list-group">
       <li class="list-group-item">{{event.name}}</li>
       <li class="list-group-item">Location: {{event.address}}</li>

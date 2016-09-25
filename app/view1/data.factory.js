@@ -145,7 +145,7 @@ var _orgs = {
     category: 'Healthcare',
     serviceArea: [],
     events: [{
-      name: 'Project Homless Connect',
+      name: 'Project Homeless Connect',
       location: [37.776472, -122.420194],
       address: '25 Van Ness Ave #340, San Francisco, CA 94102',
       description: 'Food in the valley',
