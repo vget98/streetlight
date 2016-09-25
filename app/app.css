@@ -61,6 +61,13 @@ body{
   height: 600px;
   margin: 0 !important;
 }
+
 .right-side {
   float: right;
+
+}
+
+.map-icon {
+    font-size: 20px;
+    color: beige;
 }

@@ -45,7 +45,7 @@ angular.module('myApp.mapWrapper')
       mc.path.push([event.latLng.lat(), event.latLng.lng()]);
       console.log('path:', mc.path);
     };
-    
+
     mc.getColor = function(category) {
       var _colorMap = {
         'healthcare': '#FF0000',
@@ -54,6 +54,16 @@ angular.module('myApp.mapWrapper')
       };
       return _colorMap[category];
     };
+
+    mc.getIcon = function(category) {
+      var _icon = {
+        'healthcare': 'map-icon-doctor',
+        'food': 'map-icon-food',
+        'exercise': 'map-icon-gym'
+      };
+      return _icon[category];
+    };
+
 
     mc.$onInit = function() {
       console.log('setOrgCb: ', mc.setOrg);
