@@ -42,8 +42,8 @@ var _orgs = {
       time: ['16:30','22:00']
     }]
   },
-  'Urban Helpers':{
-    name: 'Urban Helpers',
+  'The Sanctuary':{
+    name: 'The Sanctuary',
     email: 'urbanhelpers@yahoo.com',
     location: [37.753726, -122.387846],
     address: '2833 3rd Street, San Francisco, CA 94107',
@@ -52,15 +52,15 @@ var _orgs = {
     serviceArea: [[37.78238340327456,-122.38838195800781],[37.773699921075135,-122.40623474121094],[37.75334401310656,-122.40348815917969],[37.73786977649298,-122.40657806396484],[37.735154664553534,-122.37602233886719],[37.78238340327456,-122.3876953125]],
     events:[
     {
-      name:'Urban Helpers Meeting',
+      name:'The Sanctuary Helpers Meeting',
       location: [37.753726, -122.387846],
       address: '2833 3rd Street, San Francisco, CA 94107',
-      description: 'Meet with the Urban Helpers and learn more',
+      description: 'Meet with the The Sanctuary Helpers and learn more',
       date: '09/25/16',
       time: ['17:45','20:00']
     },
     {
-      name:'Urban Helpers Meeting',
+      name:'The Sanctuary Helpers Meeting',
       location: [37.753726, -122.387846],
       address: '2833 3rd Street, San Francisco, CA 94107',
       description: 'Meet with the Urban Helpers and learn more',
@@ -68,8 +68,8 @@ var _orgs = {
       time: ['17:45','20:00']
     }]
   },
-  'Mountain Helpers':{
-    name: 'Mountain Helpers',
+  'Coalition On homelessness San Francisco':{
+    name: 'Coalition On homelessness San Francisco',
     email: 'mountainhelpers@sbcglobal.net',
     location: [37.786962, -122.458764],
     description: 'i guess some mountains need help too',
@@ -85,11 +85,11 @@ var _orgs = {
       time: ['12:00','17:30']
     }]
   },
-    'Sunset Helpers': {
+    'Sunset Homeless Collective': {
     name: 'Sunset Helpers',
     emial: 'sunsethelpers@hotmail.com',
     location: [37.750573, -122.498686],
-    description: 'helping homeless walk into sunset',
+    description: 'Tackling the homelessness in the Sunset district',
     address: '',
     category: 'Healthcare',
     serviceArea: [],
@@ -102,8 +102,8 @@ var _orgs = {
       time: ['08:00', '20:00']
     }]
   },
-  'Merced Helpers': {
-    name: 'Merced Helpers',
+  'A Home Away From Homelessness': {
+    name: 'A Home Away From Homelessness',
     emial: 'mercedhelpers@hotmail.com',
     location: [37.708329, -122.447038],
     description: 'Helping homelss around the lake',
@@ -119,11 +119,11 @@ var _orgs = {
       time: ['13:00', '18:45']
     }]
   },
-  'Visitation Helpers': {
-    name: 'Visitation Helpers',
+  'Visitacion Valley Homeless Project': {
+    name: 'Visitacion Valley Homeless Project',
     email: 'visitationhelpers.gmail.com',
     location: [37.713948, -122.407953],
-    description: 'visiting the homeless in the valley',
+    description: 'helping the homeless in the valley',
     address: '',
     category: 'food',
     serviceArea: [],
@@ -133,6 +133,23 @@ var _orgs = {
       address: '',
       description: 'Food in the valley',
       date: '1/1/17',
+      time: ['08:00', '12:56']
+    }]
+  },
+  'Project Homeless Connect': {
+    name: 'Project Homeless Connect',
+    email: 'projecthomelessconnect.gmail.com',
+    location: [37.776472, -122.420194],
+    description: 'The mission of Project Homeless Connect is to connect San Franciscans experiencing homelessness with the care they need to move forward',
+    address: '25 Van Ness Ave #340, San Francisco, CA 94102',
+    category: 'Healthcare',
+    serviceArea: [],
+    events: [{
+      name: 'Project Homless Connect',
+      location: [37.776472, -122.420194],
+      address: '25 Van Ness Ave #340, San Francisco, CA 94102',
+      description: 'Food in the valley',
+      date: '9/28/16',
       time: ['08:00', '12:56']
     }]
   }
