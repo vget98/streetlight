@@ -14,6 +14,8 @@ body{
 .nav a:focus{
   background-color: white !important;
   color:black;
+  border-bottom: 1px solid black !important;
+
 }
 .menu {
   list-style: none;
