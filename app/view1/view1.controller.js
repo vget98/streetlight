@@ -1,5 +1,5 @@
 angular.module('myApp.view1')
-  .controller('View1Ctrl', ['$uibModal', 'DataFactory', function($uibModal, DataFactory) {
+  .controller('View1Ctrl', ['$uibModal', 'DataFactory', '$scope', function($uibModal, DataFactory, $scope) {
   var vc = this;
   vc.yolo = 'hey there';
 
@@ -21,9 +21,19 @@ angular.module('myApp.view1')
        size: size
      });
    };
+  var _checkOrgMap = function(){
+    console.log('length: ', Object.keys(DataFactory.orgs).length);
+    return Object.keys(DataFactory.orgs).length;
+  };
   var _init = function(){
     vc.orgMap = DataFactory.orgs;
-    console.log('orgMap: ', vc.orgMap)
+    console.log('orgMap: ', vc.orgMap);
+    $scope.$watch(_checkOrgMap, function(newVal, oldVal){
+      if(!newVal || !oldVal){
+        return false;
+      }
+      vc.orgMap = angular.copy(DataFactory.orgs);
+    })
   };
   _init()
 

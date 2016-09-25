@@ -8,7 +8,7 @@ angular.module('myApp.helper', [])
           url : 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + cords[0] + ',' + cords[1] + '&sensor=false'
         })
         .then(function(response) {
-          var address = response.data.results.formatted_address
+          var address = response.data.results.formatted_address;
           console.log('this is formatted address', address);
           return address;
         })
@@ -20,11 +20,12 @@ angular.module('myApp.helper', [])
           url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+address
         })
         .then(function(response) {
-          var coordinate = response.data.results.geometry.location
+          console.log('resp: ', response);
+          var coordinate = response.data.results[0].geometry.location;
           console.log('this is formatted coordinate', coordinate);
-          return coordinate;
+          return [coordinate.lat, coordinate.lng];
         })
       }
 
     }
-  })
+  });

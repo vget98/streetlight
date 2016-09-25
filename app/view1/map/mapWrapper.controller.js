@@ -52,8 +52,6 @@ angular.module('myApp.mapWrapper')
         'food': '#00FF00',
         'exercise': '#0000FF'
       };
-      console.log('category: ', category);
-      console.log('color: ', _colorMap[category]);
       return _colorMap[category];
     };
 
@@ -74,6 +72,7 @@ angular.module('myApp.mapWrapper')
     };
 
     mc.$onChanges = function() {
+      console.log('listing orgs');
       _listOrgs();
     }
 
