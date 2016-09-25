@@ -76,3 +76,11 @@ body{
     font-size: 20px;
     color: beige;
 }
+
+.addeventcontainer {
+  margin: 2em;
+}
+
+.addorgcontainer {
+  margin: 2em;
+}
