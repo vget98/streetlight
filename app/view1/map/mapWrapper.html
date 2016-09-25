@@ -8,18 +8,23 @@
   <div ng-repeat="o in mc.orgs track by $index">
     <marker
       id="custom-marker-{{$index}}"
-      on-click="mc.map.showInfoWindow(event, $index) && mc.markerClickHandler(event, $index, o)"
+      on-click="mc.showInfoWindow(event, $index,o)"
       position="{{o.location}}">
 <!--       <div>
         position {{p.name}}: {{p.pos[0]}}, {{p.pos[1]}}
       </div> -->
 
     </marker>
+    <span>{{$index}}</span>
+    <span>{{o.name}}</span>
     <info-window
-      id="{{$index}}">
-      <infowindow></infowindow>
+      id="{{$index}}"
+      data-index="{{$index}}"
+      >
+<!--       <infowindow get-org="mc.getOrg($index)"></infowindow> -->
     </info-window>
   </div>
+</ng-map>
 <!--
       <info-window id="0" max-width="200">
         <demo></demo>

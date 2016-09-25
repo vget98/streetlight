@@ -2,7 +2,8 @@ angular.module('myApp.infoWindow', ['ngMap'])
   .component('infowindow',{
     templateUrl:'view1/map/infowindow/infowindow.html',
     bindings: {
-      callbackname: '&',
+      getOrg: '&',
+      description: '@'
     },
     controller: 'infoWindowCtrl',
     controllerAs: 'iw'
