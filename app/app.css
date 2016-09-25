@@ -1,4 +1,7 @@
 /* app css stylesheet */
+body{
+  background-color: #F7F4F1 !important;
+}
 
 .menu {
   list-style: none;
@@ -23,6 +26,15 @@
   content: "|";
   padding-right: 0.3em;
 }
+.jumbotron{
+  margin:0 !important;
+  background-color: #F6F2F1 !important;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.jumbotron h1{
+  font-family: 'David Libre', serif;
+}
 
 #ng-map {
   height: 100%;
@@ -31,8 +43,8 @@
 
 #map-container {
   height: 600px;
+  margin: 0 !important;
 }
-
 .right-side {
   float: right;
 }

@@ -8,3 +8,7 @@ angular.module('myApp.eventList', [])
     controller: 'EventListCtrl',
     controllerAs: 'elc'
   });
+
+
+
+  //component takes obj
