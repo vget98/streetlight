@@ -53,7 +53,7 @@ body{
   font-family: 'Lobster', cursive;
 }
 
-.form-control{
+#searchbox{
   width:70% !important;
   margin: 0 auto;
 }
