@@ -44,6 +44,15 @@ angular.module('myApp.mapWrapper')
       mc.orgs = Object.keys(DataFactory.orgs).map(function(name){
         return DataFactory.orgs[name];
       });
+      mc.paths = mc.orgs.map(function(org){
+        return org.location
+      });
+      mc.paths2 = [
+        [37.784784, -122.410136],
+        [37.753726, -122.387846],
+        [37.786962, -122.458764]
+      ];
+      console.log('mc.paths:', mc.paths)
       _getMap();
     }
 

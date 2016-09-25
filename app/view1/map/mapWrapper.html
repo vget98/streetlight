@@ -6,6 +6,7 @@
   map-type-id="ROADMAP"
   default-style="false">
   <div ng-repeat="o in mc.orgs track by $index">
+      <span>{{o.name}}</span>
     <marker
       id="custom-marker-{{$index}}"
       on-click="mc.showInfoWindow(event, $index,o)"
@@ -24,6 +25,17 @@
 <!--       <infowindow get-org="mc.getOrg($index)"></infowindow> -->
     </info-window>
   </div>
+
+    <shape name="polygon"
+           paths="{{::mc.paths}}"
+           geodesic="true"
+           draggable="false"
+           stroke-color="#FF0000"
+           stroke-opacity="0.8"
+           stroke-weight="2"
+           fill-color="#FF0000"
+           fill-opacity="0.35">
+    </shape>
 </ng-map>
 <!--
       <info-window id="0" max-width="200">
