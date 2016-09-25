@@ -74,7 +74,7 @@ angular.module('myApp.mapWrapper')
     };
 
     mc.$onChanges = function() {
-      _listOrgs;
+      _listOrgs();
     }
 
   }]);
