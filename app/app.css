@@ -53,6 +53,15 @@ body{
   font-family: 'Lobster', cursive;
 }
 
+.form-control{
+  width:70% !important;
+  margin: 0 auto;
+}
+.list-group{
+  margin: 0 auto;
+  width:50%;
+}
+
 #ng-map {
   height: 100%;
   display: block;
