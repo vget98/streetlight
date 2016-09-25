@@ -19,6 +19,7 @@
       </div>
     </custom-marker>
     <shape name="polygon"
+           on-click="mc.mapClickHandler()"
          paths="{{o.serviceArea}}"
          stroke-color="{{mc.getColor(o.category)}}"
          stroke-opacity="0.8"
