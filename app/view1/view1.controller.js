@@ -1,5 +1,5 @@
 angular.module('myApp.view1')
-  .controller('View1Ctrl', ['$uibModal', 'DataFactory', '$scope', function($uibModal, DataFactory, $scope) {
+  .controller('View1Ctrl', ['$uibModal', 'DataFactory', '$scope', '$timeout', function($uibModal, DataFactory, $scope, $timeout) {
   var vc = this;
   vc.yolo = 'hey there';
 
@@ -23,6 +23,12 @@ angular.module('myApp.view1')
       vc.orgMap = angular.copy(DataFactory.orgs);
     })
   };
+    $scope.$on('created', function(){
+      vc.showPopover = true;
+      $timeout(function(){
+        vc.showPopover = false;
+      }, 5000)
+    });
   _init();
 
 

@@ -35,5 +35,9 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
        controllerAs: 'uc',
        size: size
      });
+    modalInstance.result.then(function(result){
+      console.log('result happened!', result);
+      $scope.$broadcast('created', result);
+    })
    };
   }]);

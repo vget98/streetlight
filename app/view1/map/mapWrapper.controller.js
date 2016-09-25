@@ -1,5 +1,5 @@
 angular.module('myApp.mapWrapper')
-  .controller('MapCtrl', ['NgMap', function(NgMap){
+  .controller('MapCtrl', ['NgMap', '$scope', function(NgMap, $scope){
     var mc = this;
 
     var _getMap = function(){
@@ -41,12 +41,15 @@ angular.module('myApp.mapWrapper')
     };
 
     mc.mapClickHandler = function(event) {
-      console.log('event: ', event);
-      mc.path.push([event.latLng.lat(), event.latLng.lng()]);
-      console.log('path:', mc.path);
+      if (mc.adding) {
+        console.log('pusing coord, ', mc.path);
+        mc.path.push([event.latLng.lat(), event.latLng.lng()]);
+      }
     };
 
     mc.getColor = function(category) {
+
+      category = category.toLowerCase();
       var _colorMap = {
         'healthcare': '#FF0000',
         'food': '#00FF00',
@@ -65,20 +68,20 @@ angular.module('myApp.mapWrapper')
       return _icon[category];
     };
 
+    $scope.$on('created', function(evt, createdObj){
+      mc.adding = true;
+      mc.editObj = createdObj;
+      console.log('editObj: ', mc.editObj);
+    });
+    // this is hideous pls don't do this
+    mc.saveServiceArea = function(){
+      mc.adding = false;
+      mc.orgMap[mc.editObj.name].serviceArea = mc.path;
+    };
 
     mc.$onInit = function() {
-      console.log('setOrgCb: ', mc.setOrg);
       mc.path = [];
       _listOrgs();
-      mc.paths = mc.orgs.map(function(org){
-        return org.location
-      });
-      mc.paths2 = [
-        [37.784784, -122.410136],
-        [37.753726, -122.387846],
-        [37.786962, -122.458764]
-      ];
-      console.log('mc.paths:', mc.paths)
       _getMap();
     };
 
