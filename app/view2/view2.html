@@ -6,7 +6,7 @@
   </form>
 
   <div ng-repeat="event in vt.orgEvents|filter:search">
-    <ul class="list-group">
+    <ul class="list-group searchlist">
       <li class="list-group-item">{{event.name}}</li>
       <li class="list-group-item">Location: {{event.address}}</li>
       <li class="list-group-item">{{event.description}}</li>
