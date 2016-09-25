@@ -1,5 +1,5 @@
-<h3 ng-if='elc.currOrg'><span class="label label-default">{{elc.currOrg.name}} events: </span></h3>
-<ul class="list-group" ng-repeat='event in elc.currOrg.events'>
+<h3 ng-if='elc.currOrg'><span class="label label-default">{{elc.orgName}} events: </span></h3>
+<ul class="list-group" ng-repeat='event in elc.events'>
   <li class="list-group-item">{{event.name}}</li>
   <li class="list-group-item">Location: {{event.address}}</li>
   <li class="list-group-item">{{event.description}}</li>

@@ -5,6 +5,7 @@ angular.module('myApp.view1')
 
   vc.setSelectedOrg = function(orgName) {
     vc.selectedOrgName = orgName;
+    vc.events = DataFactory.orgs[orgName].events;
     console.log("Selected Org Name called ", vc.selectedOrgName)
   };
 
@@ -35,7 +36,7 @@ angular.module('myApp.view1')
       vc.orgMap = angular.copy(DataFactory.orgs);
     })
   };
-  _init()
+  _init();
 
 
   vc.addEvent = function (size) {
@@ -45,8 +46,13 @@ angular.module('myApp.view1')
       ariaLabelledBy: 'modal-title',
       ariaDescribedBy: 'modal-body',
       templateUrl: 'view1/addevent/addEvent.html',
-       controller: 'AddEventCtrl',
-       controllerAs: 'ec',
+      controller: 'AddEventCtrl',
+      controllerAs: 'ec',
+      resolve: {
+        Selected: function(){
+          return DataFactory.orgs[vc.selectedOrgName];
+        }
+      },
       size: size
     });
   }
