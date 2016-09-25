@@ -28,4 +28,17 @@ angular.module('myApp.view1')
   _init()
 
 
+  vc.addEvent = function (size) {
+    console.log('add event modal');
+    var modalInstance = $uibModal.open({
+      animation: vc.animationsEnabled,
+      ariaLabelledBy: 'modal-title',
+      ariaDescribedBy: 'modal-body',
+      templateUrl: 'view1/addevent/addEvent.html',
+       controller: 'AddEventCtrl',
+       controllerAs: 'ec',
+      size: size
+    });
+  }
+
 }]);
