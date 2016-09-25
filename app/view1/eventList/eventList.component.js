@@ -1,22 +1,14 @@
-// var orgs = {
-//   name:{
-//     name: 'name',
-//     location: [1,1],
-//     description: 'description',
-//     category: ['stringz'],
-//     serviceArea: [[1,1],[1,1]],
-//     events:[{
-//       name:'name',
-//       location: [1,1],
-//       description: 'description',
-//       date: 'string',
-//       time: ['start string','end string']
-//     }]
-//   }
-// }
+angular.module('myApp.eventList', [])
+  .component('eventList',{
+    templateUrl:'view1/eventList/eventList.html',
+    bindings: {
+      orgName: '<'
+    },
+    controller: 'EventListCtrl',
+    controllerAs: 'elc'
+  })
 
 
-// DUMMY ORG DATA
 var orgs = {
   'Helping Hand':{
    name: 'Helping Hand',
@@ -62,4 +54,6 @@ var orgs = {
   }
 }
 
-module.exports = orgs;
+
+
+  //component takes obj
