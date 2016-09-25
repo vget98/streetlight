@@ -3,7 +3,7 @@ angular.module('myApp.eventList', [])
     templateUrl:'view1/eventList/eventList.html',
     bindings: {
       orgName: '<',
-      orgMap: '<'
+      events: '<'
     },
     controller: 'EventListCtrl',
     controllerAs: 'elc'
