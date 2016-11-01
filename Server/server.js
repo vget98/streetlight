@@ -9,7 +9,7 @@ var server = http.createServer(app);
 // Set up server middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '/../')));
+app.use(express.static(path.join(__dirname, '/../app')));
 
 // Run Server
 var port = process.env.PORT || 8000;
