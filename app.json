@@ -1,0 +1,12 @@
+{
+  "name": "Streetlight",
+  "description": "",
+  "scripts": {},
+  "env": {},
+  "formation": {},
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
